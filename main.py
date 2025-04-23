@@ -4,9 +4,9 @@ import os
 import json
 import re
 import time
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # Импортируем библиотеку для загрузки переменных окружения
 
-# Загрузим переменные окружения из файла .env
+# Загружаем переменные окружения из файла .env
 load_dotenv()
 
 # ==== Темы ====
@@ -25,7 +25,7 @@ else:
     post_history = []
 
 # ==== Hugging Face ====
-HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")  # Получаем API-ключ из переменной окружения
 HF_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 
 huggingface_url = f"https://api-inference.huggingface.co/models/{HF_MODEL}"
@@ -90,8 +90,8 @@ with open(history_file, "w") as f:
     json.dump(post_history[-50:], f)
 
 # ==== Публикация в Warpcast через Neynar ====
-NEYNAR_API_KEY = os.getenv("NEYNAR_API_KEY")
-SIGNER_UUID = os.getenv("SIGNER_UUID")
+NEYNAR_API_KEY = "FC0A77EE-4A1E-431F-9A73-21F2619CA27B"
+SIGNER_UUID = "7b628d8d-8b22-4d11-9dce-1cf8f1a11e53"
 
 publish_url = "https://api.neynar.com/v2/farcaster/cast"
 publish_headers = {
