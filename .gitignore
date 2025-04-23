@@ -1,0 +1,38 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Виртуальные окружения
+warpcast_venv310/
+
+# Логи
+*.log
+
+# Настройки IDE
+.idea/
+.vscode/
+
+# Конфигурации сессий Jupyter
+.ipynb_checkpoints/
+
+# Секретные файлы и ключи
+*.env
+*.key
+*.pem
+*.crt
+
+# Персональные настройки Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Прочие файлы, которые могут быть специфичны для проекта
+*.db
+*.sqlite3
+*.sqlite
+
