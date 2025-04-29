@@ -36,3 +36,4 @@ pip-delete-this-directory.txt
 *.sqlite3
 *.sqlite
 
+accounts.json
